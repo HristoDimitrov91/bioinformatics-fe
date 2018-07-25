@@ -1,12 +1,7 @@
-.sidenav-container {
-  height: 100%;
-}
-
-.sidenav {
-  width: 200px;
-}
-
-.mat-toolbar.mat-primary {
-  position: sticky;
-  top: 0;
+html {
+  background-image: url("../../assets/dna.jpeg");
+  -webkit-background-size: cover;
+  -moz-background-size: cover;
+  -o-background-size: cover;
+  background-size: cover;
 }

@@ -1,2 +1,20 @@
 /* You can add global styles to this file, and also import other style files */
-@import "~node_modules/@angular/material/prebuilt-themes/deeppurple-amber.css"
+@import "~node_modules/@angular/material/prebuilt-themes/deeppurple-amber.css";
+
+html {
+    background-image: url(assets/dna.jpeg);
+    background-position-x: center;
+    background-position-y: center;
+    background-size: cover;
+    background-repeat-x: no-repeat;
+    background-repeat-y: no-repeat;
+    background-attachment: fixed;
+    background-origin: initial;
+    background-clip: initial;
+    background-color: initial;
+    -webkit-background-size: cover;
+    -moz-background-size: cover;
+    -o-background-size: cover;
+    background-size: cover;
+  }
+  
