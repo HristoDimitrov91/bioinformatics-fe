@@ -1,20 +1,20 @@
 import { async, ComponentFixture, TestBed } from '@angular/core/testing';
 
-import { GooglemapComponent } from './googlemap.component';
+import { EmailContactComponent } from './email-contact.component';
 
-describe('GooglemapComponent', () => {
-  let component: GooglemapComponent;
-  let fixture: ComponentFixture<GooglemapComponent>;
+describe('EmailContactComponent', () => {
+  let component: EmailContactComponent;
+  let fixture: ComponentFixture<EmailContactComponent>;
 
   beforeEach(async(() => {
     TestBed.configureTestingModule({
-      declarations: [ GooglemapComponent ]
+      declarations: [ EmailContactComponent ]
     })
     .compileComponents();
   }));
 
   beforeEach(() => {
-    fixture = TestBed.createComponent(GooglemapComponent);
+    fixture = TestBed.createComponent(EmailContactComponent);
     component = fixture.componentInstance;
     fixture.detectChanges();
   });

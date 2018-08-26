@@ -9,7 +9,8 @@ import { HeaderComponent } from './components/header/header.component';
 import { ParallaxDirective } from './parallax.directive';
 import { RosalindComponent } from './bio-body/rosalind/rosalind.component';
 import { ContactsComponent } from './bio-body/contacts/contacts.component';
-import { GooglemapComponent } from './googlemap/googlemap.component';
+import { EmailContactComponent } from './email-contact/email-contact.component';
+import { FormsModule } from '@angular/forms';
 
 @NgModule({
   declarations: [
@@ -19,7 +20,7 @@ import { GooglemapComponent } from './googlemap/googlemap.component';
     ParallaxDirective,
     RosalindComponent,
     ContactsComponent,
-    GooglemapComponent
+    EmailContactComponent
   ],
   imports: [
     BrowserModule,
@@ -29,7 +30,8 @@ import { GooglemapComponent } from './googlemap/googlemap.component';
     MatSidenavModule,
     MatIconModule,
     MatListModule,
-    BrowserAnimationsModule
+    BrowserAnimationsModule,
+    FormsModule
   ],
   providers: [],
   bootstrap: [AppComponent]
