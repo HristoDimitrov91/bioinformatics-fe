@@ -5,12 +5,14 @@ import { AppComponent } from './app.component';
 import { LayoutModule } from '@angular/cdk/layout';
 import { MatToolbarModule, MatButtonModule, MatSidenavModule, MatIconModule, MatListModule } from '@angular/material';
 import { BioBodyComponent } from './bio-body/bio-body.component';
-import { HeaderComponent } from './components/header/header.component';
 import { ParallaxDirective } from './parallax.directive';
-import { RosalindComponent } from './bio-body/rosalind/rosalind.component';
-import { ContactsComponent } from './bio-body/contacts/contacts.component';
-import { EmailContactComponent } from './email-contact/email-contact.component';
 import { FormsModule } from '@angular/forms';
+import { IntroComponent } from './components/intro/intro.component';
+import { HeaderComponent } from 'src/app/bio-header/header.component';
+import { RosalindComponent } from 'src/app/components/rosalind/rosalind.component';
+import { ContactsComponent } from 'src/app/components/contacts/contacts.component';
+import { EmailContactComponent } from 'src/app/components/contacts/email-contact/email-contact.component';
+import { AuthorInfoComponent } from './components/contacts/author-info/author-info.component';
 
 @NgModule({
   declarations: [
@@ -20,7 +22,9 @@ import { FormsModule } from '@angular/forms';
     ParallaxDirective,
     RosalindComponent,
     ContactsComponent,
-    EmailContactComponent
+    EmailContactComponent,
+    IntroComponent,
+    AuthorInfoComponent
   ],
   imports: [
     BrowserModule,
