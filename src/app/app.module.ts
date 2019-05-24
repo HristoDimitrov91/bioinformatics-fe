@@ -5,7 +5,6 @@ import { AppComponent } from './app.component';
 import { LayoutModule } from '@angular/cdk/layout';
 import { MatToolbarModule, MatMenuModule, MatButtonModule, MatSidenavModule, MatIconModule, MatListModule, MatTabsModule } from '@angular/material';
 import { BioBodyComponent } from './bio-body/bio-body.component';
-import { ParallaxDirective } from './parallax.directive';
 import { FormsModule } from '@angular/forms';
 import { IntroComponent } from './components/intro/intro.component';
 import { HeaderComponent } from 'src/app/bio-header/header.component';
@@ -27,7 +26,6 @@ import { CommonModule } from '@angular/common';
     AppComponent,
     BioBodyComponent,
     HeaderComponent,
-    ParallaxDirective,
     RosalindComponent,
     ContactsComponent,
     EmailContactComponent,
