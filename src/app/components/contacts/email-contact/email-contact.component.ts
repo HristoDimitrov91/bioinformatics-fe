@@ -17,7 +17,14 @@ export class EmailContactComponent implements OnInit {
 
   processForm() {
     const allInfo = `My name is ${this.name}. My email is ${this.email}. My message is ${this.message}`;
-    alert(allInfo); 
+    alert(allInfo);
+    this.clearForm();
+  }
+
+  clearForm() {
+    this.name = '';
+    this.email = '';
+    this.message = '';
   }
 
 }

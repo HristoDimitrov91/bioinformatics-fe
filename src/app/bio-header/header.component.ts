@@ -5,7 +5,7 @@ import {
   transition,
   trigger
 } from '@angular/animations';
-import { AfterViewInit, Component, HostBinding } from '@angular/core';
+import { AfterViewInit, Component, HostBinding, Output, EventEmitter } from '@angular/core';
 import { fromEvent } from 'rxjs';
 import {
   distinctUntilChanged,
@@ -27,7 +27,7 @@ enum Direction {
 }
 
 @Component({
-  selector: 'app-header',
+  selector: 'app-bio-header',
   templateUrl: './header.component.html',
   styleUrls: ['./header.component.css'],
   animations: [
@@ -47,6 +47,7 @@ enum Direction {
 export class HeaderComponent implements AfterViewInit {
 
   private isVisible = true;
+  @Output() public sidenavToggle = new EventEmitter();
 
   @HostBinding('@toggle')
   get toggle(): VisibilityState {
@@ -73,5 +74,9 @@ export class HeaderComponent implements AfterViewInit {
 
     goingUp$.subscribe(() => (this.isVisible = true));
     goingDown$.subscribe(() => (this.isVisible = false));
+  }
+
+  public onToggleSidenav = () => {
+    this.sidenavToggle.emit();
   }
 }
