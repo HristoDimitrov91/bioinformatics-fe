@@ -1,0 +1,25 @@
+/* Add a background color and some padding around the form */
+.container {
+    border-radius: 5px;
+    background-color: #f2f2f2;
+    padding: 20px;
+}
+
+.author {
+    font-size: 22px;
+    padding-top: 10px;
+    color: #3a3a3a;
+    text-align: center;
+}
+
+.author-image {
+    width: 80px;
+    height: 80px;
+    border-radius: 50%;
+    margin: 0 auto;
+}
+
+.author-info {
+    text-align: center;
+
+}

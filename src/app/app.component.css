@@ -3,6 +3,11 @@
     max-width: 960px;
     margin: 0 auto;
   }
+
+  .section {
+    padding: 3rem 1.5rem;
+  }
+
   section.section:last-child {
     margin-bottom: 0;
   }

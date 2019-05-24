@@ -13,6 +13,9 @@ import { RosalindComponent } from 'src/app/components/rosalind/rosalind.componen
 import { ContactsComponent } from 'src/app/components/contacts/contacts.component';
 import { EmailContactComponent } from 'src/app/components/contacts/email-contact/email-contact.component';
 import { AuthorInfoComponent } from './components/contacts/author-info/author-info.component';
+import { FlexLayoutModule } from '@angular/flex-layout';
+import { TwitterTweetComponent } from './components/contacts/twitter-tweet/twitter-tweet.component';
+import { TwitterFollowComponent } from './components/contacts/twitter-follow/twitter-follow.component';
 
 @NgModule({
   declarations: [
@@ -24,7 +27,9 @@ import { AuthorInfoComponent } from './components/contacts/author-info/author-in
     ContactsComponent,
     EmailContactComponent,
     IntroComponent,
-    AuthorInfoComponent
+    AuthorInfoComponent,
+    TwitterTweetComponent,
+    TwitterFollowComponent,
   ],
   imports: [
     BrowserModule,
@@ -35,7 +40,8 @@ import { AuthorInfoComponent } from './components/contacts/author-info/author-in
     MatIconModule,
     MatListModule,
     BrowserAnimationsModule,
-    FormsModule
+    FormsModule,
+    FlexLayoutModule,
   ],
   providers: [],
   bootstrap: [AppComponent]

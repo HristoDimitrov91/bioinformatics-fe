@@ -75,5 +75,3 @@ export class HeaderComponent implements AfterViewInit {
     goingDown$.subscribe(() => (this.isVisible = false));
   }
 }
-
-
