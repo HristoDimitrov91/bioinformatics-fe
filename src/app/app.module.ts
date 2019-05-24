@@ -3,7 +3,7 @@ import { NgModule } from '@angular/core';
 import { BrowserAnimationsModule } from "@angular/platform-browser/animations";
 import { AppComponent } from './app.component';
 import { LayoutModule } from '@angular/cdk/layout';
-import { MatToolbarModule, MatButtonModule, MatSidenavModule, MatIconModule, MatListModule, MatTabsModule } from '@angular/material';
+import { MatToolbarModule, MatMenuModule, MatButtonModule, MatSidenavModule, MatIconModule, MatListModule, MatTabsModule } from '@angular/material';
 import { BioBodyComponent } from './bio-body/bio-body.component';
 import { ParallaxDirective } from './parallax.directive';
 import { FormsModule } from '@angular/forms';
@@ -17,7 +17,10 @@ import { FlexLayoutModule } from '@angular/flex-layout';
 import { TwitterTweetComponent } from './components/contacts/twitter-tweet/twitter-tweet.component';
 import { TwitterFollowComponent } from './components/contacts/twitter-follow/twitter-follow.component';
 import { RoutingModule } from './routing/routing.module';
-import { LayoutComponent } from './layout/layout.component';
+import { LayoutComponent } from './components/layout/layout.component';
+import { SidenavListComponent } from './components/sidenav-list/sidenav-list.component';
+import { CommonModule } from '@angular/common';
+
 
 @NgModule({
   declarations: [
@@ -33,20 +36,23 @@ import { LayoutComponent } from './layout/layout.component';
     TwitterTweetComponent,
     TwitterFollowComponent,
     LayoutComponent,
+    SidenavListComponent,
   ],
   imports: [
     BrowserModule,
     LayoutModule,
-    MatToolbarModule,
-    MatButtonModule,
-    MatSidenavModule,
-    MatIconModule,
-    MatListModule,
-    MatTabsModule,
     BrowserAnimationsModule,
     FormsModule,
     FlexLayoutModule,
     RoutingModule,
+    MatMenuModule,
+    MatListModule,
+    MatButtonModule,
+    MatIconModule,
+    MatToolbarModule,
+    CommonModule,
+    MatTabsModule,
+    MatSidenavModule
   ],
   providers: [],
   bootstrap: [AppComponent]
