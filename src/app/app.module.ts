@@ -19,6 +19,7 @@ import { RoutingModule } from './routing/routing.module';
 import { LayoutComponent } from './components/layout/layout.component';
 import { SidenavListComponent } from './components/sidenav-list/sidenav-list.component';
 import { CommonModule } from '@angular/common';
+import { NgxPageScrollModule } from 'ngx-page-scroll';
 
 
 @NgModule({
@@ -50,7 +51,8 @@ import { CommonModule } from '@angular/common';
     MatToolbarModule,
     CommonModule,
     MatTabsModule,
-    MatSidenavModule
+    MatSidenavModule,
+    NgxPageScrollModule
   ],
   providers: [],
   bootstrap: [AppComponent]
