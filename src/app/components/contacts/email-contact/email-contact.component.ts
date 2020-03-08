@@ -1,4 +1,6 @@
 import { Component, OnInit } from '@angular/core';
+import { HttpClient, HttpHeaders } from '@angular/common/http';
+import { Inquiry } from '../resources/Inquiry';
 
 @Component({
   selector: 'app-email-contact',
@@ -10,14 +12,25 @@ export class EmailContactComponent implements OnInit {
   name: string;
   email: string;
   message: string;
-  constructor() { }
+  inquiry: Inquiry;
+  constructor(private http: HttpClient) { }
 
   ngOnInit() {
   }
 
   processForm() {
-    const allInfo = `My name is ${this.name}. My email is ${this.email}. My message is ${this.message}`;
-    alert(allInfo);
+    const httpOptions = {
+      headers: new HttpHeaders({
+        'Content-Type': 'application/json'
+      })
+    };
+    const createInquiryUrl = "http://localhost:8080/contacts/inquiry";
+    this.inquiry = {
+      name: this.name,
+      email: this.email,
+      message: this.message
+    };
+    this.http.post<Inquiry>(createInquiryUrl, this.inquiry, httpOptions).subscribe();
     this.clearForm();
   }
 

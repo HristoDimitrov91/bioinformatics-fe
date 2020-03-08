@@ -20,6 +20,7 @@ import { LayoutComponent } from './components/layout/layout.component';
 import { SidenavListComponent } from './components/sidenav-list/sidenav-list.component';
 import { CommonModule } from '@angular/common';
 import { NgxPageScrollModule } from 'ngx-page-scroll';
+import { HttpClientModule } from '@angular/common/http';
 
 
 @NgModule({
@@ -52,7 +53,8 @@ import { NgxPageScrollModule } from 'ngx-page-scroll';
     CommonModule,
     MatTabsModule,
     MatSidenavModule,
-    NgxPageScrollModule
+    NgxPageScrollModule,
+    HttpClientModule
   ],
   providers: [],
   bootstrap: [AppComponent]
