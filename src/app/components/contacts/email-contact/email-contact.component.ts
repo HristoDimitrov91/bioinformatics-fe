@@ -1,6 +1,7 @@
 import { Component, OnInit } from '@angular/core';
 import { HttpClient, HttpHeaders } from '@angular/common/http';
 import { Inquiry } from '../resources/Inquiry';
+import { environment } from '../../../../environments/environment';
 
 @Component({
   selector: 'app-email-contact',
@@ -24,13 +25,13 @@ export class EmailContactComponent implements OnInit {
         'Content-Type': 'application/json'
       })
     };
-    const createInquiryUrl = "http://localhost:8080/contacts/inquiry";
+    const createInquiryUrl = "/contacts/inquiry";
     this.inquiry = {
       name: this.name,
       email: this.email,
       message: this.message
     };
-    this.http.post<Inquiry>(createInquiryUrl, this.inquiry, httpOptions).subscribe();
+    this.http.post<Inquiry>(environment.contactsUrl + createInquiryUrl, this.inquiry, httpOptions).subscribe();
     this.clearForm();
   }
 
